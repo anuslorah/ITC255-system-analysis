@@ -6,8 +6,12 @@ public class CommunityAssistApp {
 		Donation d = new Donation();
 		Donor dd = new Donor();
 		
-		d.setDonationAmount(500);
 		dd.setDonorID(001);
+		dd.setFirstName("Mike");
+		dd.setLastName("Bot");
+		dd.setEmail("mike@bot.com");
+		
+		d.setDonationAmount(500);
 		d.setDonationID(0001);
 		d.setDate("5/11/2017");
 		
@@ -27,8 +31,12 @@ public class CommunityAssistApp {
 		d2.setDonationID(0003);
 		d2.setDate("5/10/2017");
 		
+		//this would be significantly more efficient with toString
+		
 		System.out.println("Donation amount: $" + d.getDonationAmount() + "\n" 
-				+ "DonorID: " + dd.getDonorID() + "\n" 
+				+ "DonorID: " + dd.getDonorID() + "\n"
+				+ "Donor: " + dd.getFirstName() + " " + dd.getLastName() + "\n"
+				+ "Email: " + dd.getEmail() + "\n"
 				+ "DonationID: " + d.getDonationID() + "\n" 
 				+ "Date: " + d.getDate()+ "\n");
 		
